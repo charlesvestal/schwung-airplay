@@ -55,6 +55,10 @@ function buildRootItems() {
     }));
   }
 
+  if (typeof host_swap_module === 'function') {
+    items.push(createAction('[Swap module]', () => host_swap_module()));
+  }
+
   return items;
 }
 
